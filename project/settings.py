@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+from datetime import timedelta
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,7 +29,7 @@ SECRET_KEY = 'django-insecure-=eqt+wwx*kxi%r9+hs64%9lqb%952@mqjkzgcqmrlak8r7ljil
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "deividcuello.pythonanywhere.com"]
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
@@ -68,10 +70,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
+    'rest_framework_simplejwt.token_blacklist',
     'project',
     'bookingapi',
-    'emailapi',
     'partnerapi',
+    'emailapi',
     'users.apps.UsersConfig',
 ]
 
@@ -126,6 +129,19 @@ DATABASES = {
 #     ),
 # }
 
+REST_FRAMEWORK = {
+     'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+      ],
+}
+
+SIMPLE_JWT = {
+     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=0.5),
+     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+     'ROTATE_REFRESH_TOKENS': True,
+     'BLACKLIST_AFTER_ROTATION': True
+}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -177,4 +193,3 @@ MEDIA_URL = '/media/'
 
 # AUTH_USER_MODEL = "users.User"
 AUTH_USER_MODEL = 'users.AppUser'
-
