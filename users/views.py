@@ -108,7 +108,7 @@ class UserDetailApiView(APIView):
         recover_password = request.data.get('recover_password')
         update_username = request.data.get('update_username')
         update_password = request.data.get('update_password')
-        update_email = request.data.get('update_email')
+        update_email = request.data.get('update_email').lower() 
         username_instance = self.get_object(username_id, request.user.id)
         if not username_instance:
             return Response(

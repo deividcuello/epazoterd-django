@@ -71,6 +71,7 @@ INSTALLED_APPS = [
     'project',
     'bookingapi',
     'emailapi',
+    'partnerapi',
     'users.apps.UsersConfig',
 ]
 
