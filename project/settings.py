@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-=eqt+wwx*kxi%r9+hs64%9lqb%952@mqjkzgcqmrlak8r7ljil
 DEBUG = False
 
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost", "deividcuello.pythonanywhere.com"]
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "epazote.pythonanywhere.com"]
 
 CORS_ALLOWED_ORIGINS = [
     'http://epazote.com.do/',

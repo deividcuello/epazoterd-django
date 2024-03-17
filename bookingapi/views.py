@@ -35,7 +35,7 @@ class BookingApiView(APIView):
             'booking_code': request.data.get('booking_code'), 
             'additional_info': request.data.get('additional_info'), 
             'people_no': request.data.get('people_no'), 
-            'user_pk': request.data.get('user')
+            'user_pk': request.data.get('user_pk')
             }
 
         if(not request.data.get('additional_info')):
