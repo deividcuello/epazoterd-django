@@ -32,14 +32,12 @@ DEBUG = False
 ALLOWED_HOSTS = ["127.0.0.1", "localhost", "epazote.pythonanywhere.com"]
 
 CORS_ALLOWED_ORIGINS = [
-    'http://epazote.com.do/',
-    'epazote.com.do/'
+    'https://epazote.com.do',
 #    'https://vma.vvw.mybluehost.me/'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'http://epazote.com.do/',
-    'epazote.com.do/'
+    'https://epazote.com.do',
 #    'https://vma.vvw.mybluehost.me/'
 ]
 
@@ -129,6 +127,9 @@ REST_FRAMEWORK = {
      'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
       ],
+      'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    )
 }
 
 SIMPLE_JWT = {
