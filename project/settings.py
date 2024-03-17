@@ -32,19 +32,15 @@ DEBUG = False
 ALLOWED_HOSTS = ["127.0.0.1", "localhost", "deividcuello.pythonanywhere.com"]
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',
-    'http://127.0.0.1:5173',
-    'http://localhost:8000',
-    'http://127.0.0.1:8000',
-    'http://0.0.0.0',
+    'http://epazote.com.do/',
+    'epazote.com.do/'
+#    'https://vma.vvw.mybluehost.me/'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:5173',
-    'http://127.0.0.1:5173',
-    'http://localhost:8000',
-    'http://127.0.0.1:8000',
-    'http://0.0.0.0',
+    'http://epazote.com.do/',
+    'epazote.com.do/'
+#    'https://vma.vvw.mybluehost.me/'
 ]
 
 CORS_ALLOW_CREDENTIALS = True
@@ -136,8 +132,8 @@ REST_FRAMEWORK = {
 }
 
 SIMPLE_JWT = {
-     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=0.5),
-     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=87600),
+     'REFRESH_TOKEN_LIFETIME': timedelta(days=365),
      'ROTATE_REFRESH_TOKENS': True,
      'BLACKLIST_AFTER_ROTATION': True
 }

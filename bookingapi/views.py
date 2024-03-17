@@ -32,11 +32,10 @@ class BookingApiView(APIView):
             'date': request.data.get('date'), 
             'time': request.data.get('time'), 
             'time2': request.data.get('time2'), 
-            'email': request.data.get('email'), 
             'booking_code': request.data.get('booking_code'), 
             'additional_info': request.data.get('additional_info'), 
             'people_no': request.data.get('people_no'), 
-            'user': request.user.id
+            'user_pk': request.data.get('user')
             }
 
         if(not request.data.get('additional_info')):
@@ -45,10 +44,9 @@ class BookingApiView(APIView):
             'date': request.data.get('date'), 
             'time': request.data.get('time'), 
             'time2': request.data.get('time2'), 
-            'email': request.data.get('email'), 
             'booking_code': request.data.get('booking_code'), 
             'people_no': request.data.get('people_no'), 
-            'user': request.user.id
+            'user_pk': request.data.get('user_pk')
             }
 
         serializer = BookingSerializer(data=data)

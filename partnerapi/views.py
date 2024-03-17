@@ -83,7 +83,7 @@ class PartnerDetailApiView(APIView):
 
         serializer = PartnerSerializer(partner_instance)
         return Response(serializer.data, status=status.HTTP_200_OK)
-        isCV = 'http://localhost:8000/media' in request.data.get('isCV')
+        # isCV = 'http://localhost:8000/media' in request.data.get('isCV')
         isAdmin = request.GET.get('isAdmin')
         
         partner_instance = self.get_object(partner_id, request.user.id)
