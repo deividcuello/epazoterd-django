@@ -46,12 +46,12 @@ CORS_ALLOW_CREDENTIALS = True
 
 #Email Config
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'Info.epazote@gmail.com'
-EMAIL_HOST_PASSWORD ='gwtowzaglqfymdtw'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD =''
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_TIMEOUT = 300 # in seconds
-DEFAULT_FROM_EMAIL = 'Restaurante Epazote info.epazote@gmail.com'
+DEFAULT_FROM_EMAIL = 'Restaurante Epazote'
 
 # Application definition
 
